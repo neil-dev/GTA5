@@ -11,7 +11,7 @@ def draw_lines(img, lines):
     try:
         for line in lines:
             coords = line[0]
-            cv2.line(img, (coords[0],coords[1]), (coords[2],coords[3]), [255,255,255], 3)
+            cv2.line(img, (coords[0], coords[1]), (coords[2], coords[3]), [255, 255, 255], 3)
     except:
         pass
 
@@ -46,9 +46,10 @@ def main():
         print('Loop took {} seconds.'.format(time.time() - last_time))
         last_time = time.time()
         cv2.imshow('window',new_screen)
-    ##    cv2.imshow('window',cv2.cvtColor(screen,cv2.COLOR_BGR2RGB))
+    #     cv2.imshow('window',cv2.cvtColor(screen,cv2.COLOR_BGR2RGB))
         if cv2.waitKey(25) & 0xFF == ord('q'):
             cv2.destroyAllWindows()
             break
+
 
 main()
